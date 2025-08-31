@@ -36,6 +36,7 @@ The solution is built using the mandatory **Agentic AI stack** along with core A
    # if repo zipped, upload and unzip here
 
 2. **Create python virtual environment**
+ ```bash
 cd meeting-minimizer-starter
 python3 -m venv .venv
 source .venv/bin/activate
@@ -43,9 +44,11 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 3. **Run the demo**
+ ```bash
 python src/runner.py demo-all --input data/inputs/standup/smaple.json
 
 4. **Inspect outputs**
+ ```bash
 cat outputs/standup_*.json | head -n 80
 cat outputs/events.log | tail -n 3
 cat outputs/retro_*.json | head -n 40
@@ -53,9 +56,11 @@ cat outputs/planner_*.json | head -n 40
 cat outputs/review_*.md | head -n 40
 
 5. **Build executive deck**
+ ```bash
 python src/exporters/make_deck.py
 
 6. **Verify in S3**
+ ```bash
 aws s3 ls s3://mm-suite-artifacts/outputs/
 
 ## Domain Alignment
